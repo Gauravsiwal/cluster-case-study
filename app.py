@@ -20,14 +20,13 @@ def prediction(input_data):
     scale_data = scaler.transform(input_data)
     pca_data = pca.transform(scale_data)
     pred = model.predict(pca_data)[0]
-    return pred
 
-    #if pred==0:
-    #    return 'Developed'
-    #elif pred==1:
-    #    return 'Under Developed'
-    #else:
-    #    return 'Developing''''
+    if pred==0:
+        return 'Under Developed'
+    elif pred==1:
+        return 'Developed'
+    else:
+        return 'Developing''''
 
 def main():
 

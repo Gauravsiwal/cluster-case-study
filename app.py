@@ -26,7 +26,7 @@ def prediction(input_data):
     elif pred==1:
         return 'Developed'
     else:
-        return 'Developing''''
+        return 'Developing'
 
 def main():
 

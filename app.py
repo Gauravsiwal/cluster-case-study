@@ -18,7 +18,7 @@ with open('pca_instance.pkl','rb') as file:
 def prediction(input_data):
 
     scale_data = scaler.transform(input_data)
-    pca_data = pca.transform(input_data)
+    pca_data = pca.transform(scale)
     pred = model.predict(pca_data)
 
     if pred==0:
